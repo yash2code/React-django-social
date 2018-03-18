@@ -13,7 +13,7 @@ Tech Stack :
 > - [Webpack 4](https://webpack.js.org/)
 > - [React Router](https://www.npmjs.com/package/react-router-dom)
 > - [Redux](https://github.com/reactjs/redux)
-> - [Redux Thunk](https://github.com/gaearon/redux-thunk)
+> - [Redux Saga](https://redux-saga.js.org/)
 > - [Material UI](http://www.material-ui.com/#/)
 
 ----------

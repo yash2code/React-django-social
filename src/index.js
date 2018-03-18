@@ -1,9 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import HelloWorld from './components/HelloWorld'
+import App from './App'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import reducer from './reducers'
+
+const store = createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
+
+store.subscribe(() => console.log('store',store.getState()))
 
 ReactDOM.render(
-            <HelloWorld />, 
+            <Provider store = { store }>
+            <App />
+            </Provider>, 
             document.getElementById('app')
             );
 
