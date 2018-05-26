@@ -12,10 +12,10 @@ class Grocery extends Component {
             <div className='grocery'>
                 <List>
                     {this.props.grocery.map((item) => {
-                        return <ListItem onClick = { () => this.props.addGrocery(item.id) }  key={item.id} primaryText={item.name} children={<div>
-                            <Badge badgeContent={'$'+item.cost} primary={true} badgeStyle={{ top: 33, right: 400, width:64 }} />
-                            <Badge badgeContent={item.calories+'kcal'} secondary={true} badgeStyle={{ top: 33, right: 300, width:64 }} />
-                            <Badge badgeContent={item.weight+'mg'} primary={true} badgeStyle={{ top: 33, right: 200, width:64 }} />
+                        return <ListItem onClick = { () => this.props.addGrocery(item.id) }  key={item.id} primaryText={item.name} children={<div key={item.id} className='setFlex'>
+                            <Badge className='grocery' badgeContent={'$'+item.cost} primary={true} badgeStyle={{ width:57, top:30 }} />
+                            <Badge className='grocery' badgeContent={item.calories+'kcal'} secondary={true} badgeStyle={{ width:57, top:30  }} />
+                            <Badge className='grocery' badgeContent={item.weight+'mg'} primary={true} badgeStyle={{ width:57, top:30  }} />
                         </div>} />
                     })}
                 </List>
