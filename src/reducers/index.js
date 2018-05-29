@@ -7,14 +7,16 @@ const performAction = (state = { num: 0, groceryItems }, action) => {
         case INC_NUM:
             console.log('state: ',state,' action', action);
             let num = state.num + 1
-            return { num, groceryItems }
+            return { num, groceryItems:state.groceryItems }
         case DEC_NUM:
             console.log('state: ',state,' action', action);
             num = state.num - 1
-            return { num, groceryItems }
+            return { num, groceryItems:state.groceryItems }
         case ADD_GROCERY:
-            console.log('add groc cliked');
-            return state
+            
+            let groceryItems = state.groceryItems.filter(item => item.id!==action.id);
+            console.log('grocery clicked ', action);
+            return {num:0, groceryItems}
         default:
             return state
 

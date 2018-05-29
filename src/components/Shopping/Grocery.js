@@ -36,4 +36,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Grocery)
-//export default Grocery

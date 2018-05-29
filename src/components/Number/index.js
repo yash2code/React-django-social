@@ -6,7 +6,7 @@ import './style.scss'
 
 class Number extends Component {
     render() {
-         console.log('from props: ', this.props);
+         //console.log('from props: ', this.props);
         return (
             <div className='number'>
               <div className='digit'>
