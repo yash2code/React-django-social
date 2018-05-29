@@ -27,7 +27,7 @@ class Grocery extends Component {
 const mapStateToProps = (state) => {
     console.log('mapstate: ', state);
     return {
-        grocery: state.groceryItems
+        grocery: state.performAction.groceryItems
     }
 }
 
