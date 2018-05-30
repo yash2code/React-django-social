@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './styles.scss'
-import Grocery from './Grocery.js'
+import Grocery from './Grocery'
+import ShoppingBag from './shoppingBag'
 
 
 class Shopping extends Component {
@@ -8,7 +9,7 @@ class Shopping extends Component {
         return(
             <div style={styles.container}>
                 <Grocery/>
-                <Grocery/>
+                <ShoppingBag/>
                 <Grocery/>
             </div>
         )
